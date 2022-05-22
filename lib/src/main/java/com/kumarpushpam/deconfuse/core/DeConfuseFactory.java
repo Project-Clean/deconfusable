@@ -1,6 +1,6 @@
-package deconfusable.core;
+package com.kumarpushpam.deconfuse.core;
 
-import deconfusable.enums.Language;
+import com.kumarpushpam.deconfuse.enums.Language;
 
 public class DeConfuseFactory {
 

@@ -9,12 +9,16 @@
 plugins {
     // Apply the java-library plugin for API and implementation separation.
     id 'java-library'
+    id 'maven-publish'
 }
 
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
+
+version = '0.1.0'
+group = 'com.kumarpushpam.deconfuse'
 
 dependencies {
     // Use JUnit test framework.
@@ -27,4 +31,9 @@ dependencies {
     implementation 'com.google.guava:guava:30.1.1-jre'
 
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+}
+
+tasks.withType(Test) {
+    scanForTestClasses = false
+    include "**/*Test.class" // whatever Ant pattern matches your test class files
 }

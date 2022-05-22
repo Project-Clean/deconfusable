@@ -1,4 +1,4 @@
-package deconfusable.data;
+package com.kumarpushpam.deconfuse.data;
 
 import org.json.simple.JSONObject;
 

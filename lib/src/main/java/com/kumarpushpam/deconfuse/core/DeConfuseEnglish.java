@@ -1,6 +1,6 @@
-package deconfusable.core;
+package com.kumarpushpam.deconfuse.core;
 
-import deconfusable.data.EnglishData;
+import com.kumarpushpam.deconfuse.data.EnglishData;
 
 import org.json.simple.JSONObject;
 

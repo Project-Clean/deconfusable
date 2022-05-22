@@ -1,4 +1,4 @@
-package deconfusable.core;
+package com.kumarpushpam.deconfuse.core;
 
 public interface DeConfuse {
     String deConfuseString(String str);
