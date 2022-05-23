@@ -30,7 +30,7 @@ import io.github.projectclean.deconfuse.core.DeConfuseFactory;
 import io.github.projectclean.deconfuse.enums.Language;
 
 class Test {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         String s = "ƉͤĆоɳſŪȘȄ";
         DeConfuse deConfuse = DeConfuseFactory.createDeConfuse(Language.ENGLISH);
         System.out.println(deConfuse.deConfuseString(s));
