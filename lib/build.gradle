@@ -14,12 +14,12 @@ plugins {
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 version = '0.1.0'
-group = 'io.github.projectclean.deconfuse'
+group = 'io.github.projectclean'
 
 dependencies {
     // Use JUnit test framework.
@@ -35,37 +35,68 @@ dependencies {
 }
 
 publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'io.github.projectclean.deconfuse'
+    publications{
+
+        mavenJava(MavenPublication){
+
+            groupId = 'io.github.projectclean'
             artifactId = 'deconfuse'
             version = '0.1.0'
-
             from components.java
+
+            pom {
+                name = 'DeConfuse'
+                description = 'DeConfuse is a java librabry which convert confusable unicode characters(similar looking character) or string to english alphabets/strings.'
+                url = 'https://github.com/ProjectClean/deconfuse'
+                inceptionYear = '2022'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://choosealicense.com/licenses/mit/'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'PushpamK'
+                        name = 'Pushpam Kumar'
+                        email = 'pushpam.kumar.projectclean@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:git:github.com/ProjectClean/deconfuse.git'
+                    developerConnection = 'scm:git:ssh://github.com/ProjectClean/deconfuse.git'
+                    url = 'https://github.com/ProjectClean/deconfuse'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = project.properties["ossrhUsername"]
+                password = project.properties["ossrhPassword"]
+            }
         }
     }
 }
 
-configurations {
-    jaxDoclet
-}
-
-task javadocJar(type: Jar) {
-    classifier = 'javadoc'
-    from javadoc
-}
-
-task sourcesJar(type: Jar) {
-    classifier = 'sources'
-    from sourceSets.main.allSource
-}
-
-artifacts {
-    archives javadocJar, sourcesJar
-}
-
 signing {
-    sign configurations.archives
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
 }
 
 tasks.withType(Test) {
