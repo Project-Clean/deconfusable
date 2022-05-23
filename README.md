@@ -11,14 +11,14 @@ De confuse is a java librabry which convert confusable unicode characters(simila
 ### Adding as dependency
 * For gradle: add following to your `build.gradle` file.
 ```groovy
-implementation 'io.github.projectclean:deconfuse-0.1.0'
+implementation 'io.github.projectclean:deconfuse-0.1.1'
 ``` 
 * For Maven: add the following
 ```xml
 <dependency>
   <groupId>io.github.projectclean</groupId>
   <artifactId>deconfuse</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1</version>
 </dependency>
 ```
 
