@@ -1,4 +1,4 @@
-package com.kumarpushpam.deconfuse.data;
+package io.github.projectclean.deconfuse.data;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

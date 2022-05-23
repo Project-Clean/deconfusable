@@ -1,8 +1,8 @@
-package com.kumarpushpam.deconfuse;
+package io.github.projectclean.deconfuse;
 
-import com.kumarpushpam.deconfuse.core.DeConfuse;
-import com.kumarpushpam.deconfuse.core.DeConfuseFactory;
-import com.kumarpushpam.deconfuse.enums.Language;
+import io.github.projectclean.deconfuse.core.DeConfuse;
+import io.github.projectclean.deconfuse.core.DeConfuseFactory;
+import io.github.projectclean.deconfuse.enums.Language;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

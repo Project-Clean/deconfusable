@@ -1,4 +1,4 @@
-package com.kumarpushpam.deconfuse.core;
+package io.github.projectclean.deconfuse.core;
 
 public interface DeConfuse {
     /*

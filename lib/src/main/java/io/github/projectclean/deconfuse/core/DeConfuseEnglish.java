@@ -1,6 +1,6 @@
-package com.kumarpushpam.deconfuse.core;
+package io.github.projectclean.deconfuse.core;
 
-import com.kumarpushpam.deconfuse.data.EnglishData;
+import io.github.projectclean.deconfuse.data.EnglishData;
 
 import org.json.simple.JSONObject;
 
