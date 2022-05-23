@@ -33,6 +33,10 @@ dependencies {
 
     implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 }
+Properties properties = new Properties()
+properties.load(project.rootProject.file('lib/gradle.properties').newDataInputStream())
+// Because the components are created only during the afterEvaluate phase, you must
+// configure your publications using the afterEvaluate() lifecycle method.
 
 publishing {
     publications{
@@ -53,7 +57,7 @@ publishing {
                 licenses {
                     license {
                         name = 'MIT License'
-                        url = 'https://choosealicense.com/licenses/mit/'
+                        url = 'https://opensource.org/licenses/MIT'
                     }
                 }
                 developers {

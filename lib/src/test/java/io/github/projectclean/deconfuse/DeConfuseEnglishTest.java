@@ -19,6 +19,9 @@ public class DeConfuseEnglishTest {
     @Test public void deConfuseStringTest() {
         assertEquals(deConfuse.deConfuseString("\u2C6E\u2C6B\u2C69"), "mzk");
     }
+    @Test public void deConfuseAllAlphabetsTest() {
+        assertEquals(deConfuse.deConfuseString("\u00C1\u0182\u010C\u1D81\u0113\u03DC\u0120\u01F6\u00CE\u037F\u04C3\u026B\uA4DF\u0148\u00F2\u03C1\u0563\u0158\u01BD\u021A\u016C\u01B2\u0175\u00D7\u00FF\u017B"), "abcdefghijklmnopqrstuvwxyz");
+    }
     @Test public void isNativeCharacterTest() {
         assertTrue("A is native char to should return true", deConfuse.isNativeCharacter((int)'A'));
         assertFalse("Ⱨ is native char to should return true", deConfuse.isNativeCharacter(11367));
