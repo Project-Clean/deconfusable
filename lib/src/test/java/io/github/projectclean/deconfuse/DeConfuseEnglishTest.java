@@ -24,6 +24,6 @@ public class DeConfuseEnglishTest {
     }
     @Test public void isNativeCharacterTest() {
         assertTrue("A is native char so, it should return true", deConfuse.isNativeCharacter((int)'A'));
-        assertFalse("Ⱨ is native char so, it should return false", deConfuse.isNativeCharacter(11367));
+        assertFalse("Ⱨ is not native char so, it should return false", deConfuse.isNativeCharacter(11367));
     }
 }
