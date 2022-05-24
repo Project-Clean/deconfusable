@@ -44,10 +44,17 @@ class Test {
 ```
 
 ## Demo
-```curl
+### POST Request
+```bash
 curl --location --request POST 'https://kumarpushpam.com/api/v1/deconfuse/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "str": "ƉͤĆоɳſŪȘȄ"
 }'
+```
+### Response
+```json
+{
+    "deConfusedString": "deconfuse"
+}
 ```
