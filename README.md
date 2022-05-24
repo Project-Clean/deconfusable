@@ -13,7 +13,7 @@ De confuse is a java librabry which convert confusable unicode characters(simila
 ```groovy
 implementation 'io.github.projectclean:deconfuse-0.1.1'
 ``` 
-* For Maven: add the following
+* For Maven: add the following to your `pom.xml` file.
 ```xml
 <dependency>
   <groupId>io.github.projectclean</groupId>
@@ -44,7 +44,7 @@ class Test {
 ```
 
 ## Demo
-```shell
+```curl
 curl --location --request POST 'https://kumarpushpam.com/api/v1/deconfuse/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
