@@ -22,7 +22,7 @@ implementation 'io.github.projectclean:deconfuse-0.1.1'
 </dependency>
 ```
 
-# Example
+## Example
 
 ```java
 import io.github.projectclean.deconfuse.core.DeConfuse;
@@ -41,4 +41,13 @@ class Test {
  * Output:
  * deconfuse
  */
+```
+
+## Demo
+```shell
+curl --location --request POST 'https://kumarpushpam.com/api/v1/deconfuse/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "str": "ƉͤĆоɳſŪȘȄ"
+}'
 ```
